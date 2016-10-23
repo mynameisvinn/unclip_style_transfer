@@ -13,3 +13,6 @@ WORKDIR /root/fast-neural-style
 
 # fetch pretrained model
 RUN bash models/download_style_transfer_models.sh
+
+# copy images
+COPY . /root/fast-neural-style
