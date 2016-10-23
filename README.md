@@ -4,8 +4,8 @@
 style transfer for 360 photos and videos. 
 
 ## specs
-* Ubuntu 14.04
-* [Torch](http://torch.ch/). includes nn, cutorch, image, lua-cjson, cunn and cuDNN bindings - the good stuff.
+* ubuntu 14.04
+* [torch](http://torch.ch/). includes nn, cutorch, image, lua-cjson, cunn and cuDNN bindings - the good stuff.
 
 ## ml deets
 for more information on approach and dataset, refer to ["perceptual losses for real time style transfer and super resolution."](https://cs.stanford.edu/people/jcjohns/eccv16/)
@@ -20,7 +20,7 @@ building torch/lua from source for osx ruined my weekend. it is not for the fain
 docker pull mynameisvinn/unclip_style_transfer
 ```
 
-### option 2: build locally
+### option 2: build locally (recommended for now)
 ```
 git clone https://github.com/mynameisvinn/unclip_style_transfer
 cd unclip_style_transfer
@@ -34,12 +34,11 @@ docker build -t mynameisvinn/unclip_style_transfer .
 from command line, do
 
 ```
-docker run -it -p 8888:8888 -p 6006:6006 -v /Users/vincenttang/dropbox/temp/unclip_style_transfer/data:/root/fast-neural-style/data unclip_style_transfer th fast_neural_style.lua \
-  -model models/eccv16/starry_night.t7 \
-  -input_image data/in/hike.JPG \
+docker run -it -p 8888:8888 -p 6006:6006 -v /Users/vincenttang/dropbox/temp/unclip_style_transfer/data:/root/fast-neural-style/data mynameisvinn/unclip_style_transfer th fast_neural_style.lua \
+  -model models/eccv16/the_wave.t7 \
   -image_size 200 \
-  -output_image data/out/out.JPG
-
+  -input_dir data/in/ \
+  -output_dir data/out/
 ```
 if successful, you should see the modified image in /data/out.
 
@@ -48,17 +47,17 @@ if successful, you should see the modified image in /data/out.
 from command line, do
 
 ```
-docker run -it -p 8888:8888 -p 6006:6006 -v /Users/vincenttang/dropbox/temp/unclip_style_transfer/data:/root/fast-neural-style/data unclip_style_transfer
+docker run -it -p 8888:8888 -p 6006:6006 -v /Users/vincenttang/dropbox/temp/unclip_style_transfer/data:/root/fast-neural-style/data mynameisvinn/unclip_style_transfer
 ```
 
-then do
+then, from container, do
 
 ```
 th fast_neural_style.lua \
-  -model models/eccv16/starry_night.t7 \
-  -input_image data/in/hike.JPG \
+  -model models/eccv16/the_wave.t7 \
   -image_size 200 \
-  -output_image data/out/out.JPG
+  -input_dir data/in/ \
+  -output_dir data/out/
 ```
 
 
