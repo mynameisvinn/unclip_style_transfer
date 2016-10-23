@@ -24,7 +24,7 @@ docker pull mynameisvinn/unclip_style_transfer
 ```
 git clone https://github.com/mynameisvinn/unclip_style_transfer
 cd unclip_style_transfer
-docker build -t unclip_style_transfer .
+docker build -t mynameisvinn/unclip_style_transfer .
 ```
 
 ## run
@@ -37,11 +37,11 @@ from command line, do
 docker run -it -p 8888:8888 -p 6006:6006 -v /Users/vincenttang/dropbox/temp/unclip_style_transfer/data:/root/fast-neural-style/data unclip_style_transfer th fast_neural_style.lua \
   -model models/eccv16/starry_night.t7 \
   -input_image data/in/hike.JPG \
-  -image_size 100 \
+  -image_size 200 \
   -output_image data/out/out.JPG
 
 ```
-if successful, you should see the modified image.
+if successful, you should see the modified image in /data/out.
 
 ### option 2
 
@@ -57,7 +57,7 @@ then do
 th fast_neural_style.lua \
   -model models/eccv16/starry_night.t7 \
   -input_image data/in/hike.JPG \
-  -image_size 100 \
+  -image_size 200 \
   -output_image data/out/out.JPG
 ```
 

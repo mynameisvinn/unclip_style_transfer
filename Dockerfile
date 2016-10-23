@@ -15,6 +15,10 @@ RUN luarocks install lua-cjson
 RUN git clone https://github.com/jcjohnson/fast-neural-style
 WORKDIR /root/fast-neural-style
 
+# clean up
+RUN rm -rf images doc test scripts images
+RUN rm README.md print_options.lua requirements.txt slow_neural_style.lua train.lua webcam_demo.lua
+
 # fetch pretrained model
 RUN bash models/download_style_transfer_models.sh
 
