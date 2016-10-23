@@ -40,7 +40,7 @@ docker run -it -p 8888:8888 -p 6006:6006 -v /Users/vincenttang/dropbox/temp/uncl
   -input_dir data/in/ \
   -output_dir data/out/
 ```
-if successful, you should see the modified image in /data/out.
+if successful, you should see modified images in /data/out.
 
 ### option 2
 
