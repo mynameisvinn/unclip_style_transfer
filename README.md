@@ -5,10 +5,10 @@ style transfer for 360 photos and videos.
 
 ## specs
 * Ubuntu 14.04
-* [Torch](http://torch.ch/) (includes the good stuff - nn, cutorch, image, lua-cjson, cunn and cuDNN bindings)
+* [Torch](http://torch.ch/). includes nn, cutorch, image, lua-cjson, cunn and cuDNN bindings - the good stuff.
 
 ## ml deets
-for more information on approach and dataset, refer to ["perceptual losses for real time style transfer and super resolution"](https://cs.stanford.edu/people/jcjohns/eccv16/).
+for more information on approach and dataset, refer to ["perceptual losses for real time style transfer and super resolution."](https://cs.stanford.edu/people/jcjohns/eccv16/)
 
 ## get docker image
 
