@@ -31,7 +31,7 @@ docker build -t mynameisvinn/unclip_style_transfer .
 
 ### option 1 (recommended)
 
-from command line, do
+assuming youve placed images in /date/in, from command line, do
 
 ```
 docker run -it -p 8888:8888 -p 6006:6006 -v /Users/vincenttang/dropbox/temp/unclip_style_transfer/data:/root/fast-neural-style/data mynameisvinn/unclip_style_transfer th fast_neural_style.lua \
@@ -40,6 +40,12 @@ docker run -it -p 8888:8888 -p 6006:6006 -v /Users/vincenttang/dropbox/temp/uncl
   -input_dir data/in/ \
   -output_dir data/out/
 ```
+
+* -model refers to pretrained models. styles include la muse, composition vii, starry night, and the wave. 
+* -image_size refers to height/width. use 0 to keep original dimensions.
+* -input_dir refers to path to folder containing images.
+* -output_dir refers to path to folder for stylized images.
+
 if successful, you should see modified images in /data/out.
 
 ### option 2
