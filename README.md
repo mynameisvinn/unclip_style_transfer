@@ -48,12 +48,12 @@ docker run -it -p 8888:8888 -p 6006:6006 -v /Users/vincenttang/dropbox/temp/uncl
 
 if successful, you should see modified images in /data/out.
 
-### option 2
+### option 2 - from container
 
 from command line, do
 
 ```
-docker run -it -p 8888:8888 -p 6006:6006 -v /Users/vincenttang/dropbox/temp/unclip_style_transfer/data:/root/fast-neural-style/data mynameisvinn/unclip_style_transfer
+docker run -it -v /Users/vincenttang/dropbox/temp/unclip_style_transfer/data:/root/fast-neural-style/data mynameisvinn/unclip_style_transfer
 ```
 
 then, from container, do
