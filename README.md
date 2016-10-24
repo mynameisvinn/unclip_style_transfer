@@ -34,7 +34,7 @@ docker build -t mynameisvinn/unclip_style_transfer .
 assuming youve placed images in /date/in, from command line, do
 
 ```
-docker run -it -p 8888:8888 -p 6006:6006 -v /Users/vincenttang/dropbox/temp/unclip_style_transfer/data:/root/fast-neural-style/data mynameisvinn/unclip_style_transfer th fast_neural_style.lua \
+docker run -v /Users/vincenttang/dropbox/temp/unclip_style_transfer/data:/root/fast-neural-style/data mynameisvinn/unclip_style_transfer th fast_neural_style.lua \
   -model models/eccv16/the_wave.t7 \
   -image_size 200 \
   -input_dir data/in/ \
